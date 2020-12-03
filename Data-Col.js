@@ -12,7 +12,7 @@ let TOTAL_IMAGE = 50; //Change accordingly depending on the number of data
 
 // let folder = ["Plank", "Wallsit", "Stand"];
 // let folder = ["squatup", "squatdown"];
-// let folder = ["pushDown", "pushUp"];
+let folder = ["pushdown", "pushup"];
 
 async function keyPressed() {
   if (key == "s") {
@@ -39,7 +39,7 @@ function preload() {
   PWClassifier = ml5.neuralNetwork(options);
 
   // LOAD TRAINING DATA
-  PWClassifier.loadData("Dataset/json/sdata60.json");
+  // PWClassifier.loadData("Dataset/json/sdata60.json");
 }
 
 // function dataReady() {
@@ -49,7 +49,7 @@ function preload() {
 async function setup() {
   //poseNet options
   for (var fi = 0; fi < folder.length; fi++) {
-    for (var i = 60; i < 90; i++) {
+    for (var i = 0; i < 20; i++) {
       //iterate through all the images in the folder
       await new Promise((next) => {
         //LOADING THE IMAGE
