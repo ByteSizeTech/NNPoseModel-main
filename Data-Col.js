@@ -64,15 +64,16 @@ async function setup() {
         //posenet options
         let posenetOpts = {
           architecture: "ResNet50",
-          imageScaleFactor: 0.3,
-          outputStride: 16,
-          flipHorizontal: false,
+          // imageScaleFactor: 0.3,
+          outputStride: 32,
+          // flipHorizontal: false,
           minConfidence: 0.5,
           maxPoseDetections: 1,
+          minPartConfidence:0.5,
           scoreThreshold: 0.5,
           nmsRadius: 20,
           detectionType: "single",
-          inputResolution: 513,
+          inputResolution: 256,
           multiplier: 0.75,
           quantBytes: 2,
         };
