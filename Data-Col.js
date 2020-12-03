@@ -1,5 +1,5 @@
-//Step 1 CHange the number of files to be download in the for loop 
-//Step 2 Download the file as  
+//Step 1 CHange the number of files to be download in the for loop
+//Step 2 Download the file as
 let img;
 let posenet;
 let pose;
@@ -11,7 +11,7 @@ let finished = false;
 let TOTAL_IMAGE = 50; //Change accordingly depending on the number of data
 
 // let folder = ["Plank", "Wallsit", "Stand"];
-let folder = ["squatup", "squatdown"];
+// let folder = ["squatup", "squatdown"];
 // let folder = ["pushDown", "pushUp"];
 
 async function keyPressed() {
