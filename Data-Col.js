@@ -11,8 +11,8 @@ let finished = false;
 let TOTAL_IMAGE = 50; //Change accordingly depending on the number of data
 
 // let folder = ["Plank", "Wallsit", "Stand"];
-// let folder = ["squatup", "squatdown"];
-let folder = ["pushdown", "pushup"];
+let folder = ["squatup", "squatdown"];
+// let folder = ["pushdown", "pushup"];
 
 async function keyPressed() {
   if (key == "s") {
