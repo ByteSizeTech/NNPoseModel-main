@@ -30,7 +30,7 @@ function setup() {
     // flipHorizontal: false,
     minConfidence: 0.5,
     maxPoseDetections: 1,
-    minPartConfidence:0.5,
+    minPartConfidence: 0.5,
     scoreThreshold: 0.5,
     nmsRadius: 20,
     detectionType: "single",
@@ -39,7 +39,7 @@ function setup() {
     quantBytes: 2,
   };
 
-  poseNet = ml5.poseNet(video,posenetOpts, modelLoaded);
+  poseNet = ml5.poseNet(video, posenetOpts, modelLoaded);
   poseNet.on("pose", gotPoses);
   let options = {
     inputs: 34, //17 pairs, single pose

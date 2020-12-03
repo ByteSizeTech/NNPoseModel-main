@@ -3,7 +3,7 @@ let PWClassifier;
 function setup() {
   let options = {
     inputs: 34,
-    outputs: 3,
+    outputs: 2,
     task: "classification",
     debug: true,
   };
