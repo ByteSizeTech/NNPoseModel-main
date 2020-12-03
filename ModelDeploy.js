@@ -41,14 +41,18 @@ function setup() {
 
   poseNet = ml5.poseNet(video,posenetOpts, modelLoaded);
   poseNet.on("pose", gotPoses);
-
- 
+  let options = {
+    inputs: 34, //17 pairs, single pose
+    outputs: 3, //since the 2 labels- wallsit and plankl
+    task: "classification",
+    debug: true,
+  };
   brain = ml5.neuralNetwork(options);
   // PUSHUP MODEL
   const modelInfo = {
-    model: "pushupModel/model.json",
-    metadata: "pushupModel/model_meta.json",
-    weights: "pushupModel/model.weights.bin",
+    model: "squatModel/model.json",
+    metadata: "squatModel/model_meta.json",
+    weights: "squatModel/model.weights.bin",
   };
   // const modelInfo = {
   //   model: "squatModel/model.json",
