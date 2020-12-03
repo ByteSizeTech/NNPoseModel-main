@@ -3,12 +3,12 @@ let PWClassifier;
 function setup() {
   let options = {
     inputs: 34,
-    outputs: 3,
+    outputs: 2,
     task: "classification",
     debug: true,
   };
   PWClassifier = ml5.neuralNetwork(options);
-  PWClassifier.loadData("Dataset/json/pData.json", dataReady);
+  PWClassifier.loadData("Dataset/json2/pu112.json", dataReady);
 }
 
 async function keyPressed() {
@@ -21,9 +21,9 @@ function dataReady() {
   console.log(PWClassifier.data);
   PWClassifier.normalizeData();
   const trainingOptions = {
-    epochs: 150,
-    batchSize: 16,
-    learningRate: 0.01,
+    epochs: 50,
+    batchSize: 20,
+    learningRate: 0.0001,
   };
   PWClassifier.train(trainingOptions, doneTraining);
 }

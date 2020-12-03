@@ -30,7 +30,7 @@ function setup() {
     // flipHorizontal: false,
     minConfidence: 0.5,
     maxPoseDetections: 1,
-    minPartConfidence:0.5,
+    minPartConfidence: 0.5,
     scoreThreshold: 0.5,
     nmsRadius: 20,
     detectionType: "single",
@@ -39,16 +39,22 @@ function setup() {
     quantBytes: 2,
   };
 
-  poseNet = ml5.poseNet(video,posenetOpts, modelLoaded);
+  poseNet = ml5.poseNet(video, posenetOpts, modelLoaded);
   poseNet.on("pose", gotPoses);
 
- 
+  let options = {
+    inputs: 34, //17 pairs, single pose
+    outputs: 2, //since the 2 labels- wallsit and plankl
+    task: "classification",
+    debug: true,
+  };
+
   brain = ml5.neuralNetwork(options);
   // PUSHUP MODEL
   const modelInfo = {
-    model: "pushupModel/model.json",
-    metadata: "pushupModel/model_meta.json",
-    weights: "pushupModel/model.weights.bin",
+    model: "puModel2/model.json",
+    metadata: "puModel2/model_meta.json",
+    weights: "puModel2/model.weights.bin",
   };
   // const modelInfo = {
   //   model: "squatModel/model.json",
