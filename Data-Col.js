@@ -39,7 +39,7 @@ function preload() {
   PWClassifier = ml5.neuralNetwork(options);
 
   // LOAD TRAINING DATA
-  // PWClassifier.loadData("Dataset/json/sdata60.json");
+  PWClassifier.loadData("Dataset/json2/pu100.json");
 }
 
 // function dataReady() {
@@ -49,7 +49,7 @@ function preload() {
 async function setup() {
   //poseNet options
   for (var fi = 0; fi < folder.length; fi++) {
-    for (var i = 0; i < 20; i++) {
+    for (var i = 100; i < 113; i++) {
       //iterate through all the images in the folder
       await new Promise((next) => {
         //LOADING THE IMAGE
@@ -69,7 +69,7 @@ async function setup() {
           // flipHorizontal: false,
           minConfidence: 0.5,
           maxPoseDetections: 1,
-          minPartConfidence:0.5,
+          minPartConfidence: 0.5,
           scoreThreshold: 0.5,
           nmsRadius: 20,
           detectionType: "single",
