@@ -3,12 +3,14 @@ let PWClassifier;
 function setup() {
   let options = {
     inputs: 34,
+    //CHANGE THE OUTPUT ACCORDINGLY
     outputs: 2,
     task: "classification",
     debug: true,
+    learningRate: 0.1,
   };
   PWClassifier = ml5.neuralNetwork(options);
-  PWClassifier.loadData("Dataset/json2/sq104.json", dataReady);
+  PWClassifier.loadData("Dataset/JSON/squats.json", dataReady);
 }
 
 async function keyPressed() {
@@ -21,9 +23,8 @@ function dataReady() {
   console.log(PWClassifier.data);
   PWClassifier.normalizeData();
   const trainingOptions = {
-    epochs: 100,
-    // batchSize: 16,
-    learningRate: 0.0001,
+    epochs: 150,
+    batchSize: 20,
   };
   PWClassifier.train(trainingOptions, doneTraining);
 }
