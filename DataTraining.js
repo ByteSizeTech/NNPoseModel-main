@@ -10,7 +10,7 @@ function setup() {
     learningRate: 0.1,
   };
   PWClassifier = ml5.neuralNetwork(options);
-  PWClassifier.loadData("Dataset/JSON/squats.json", dataReady);
+  PWClassifier.loadData("Dataset/json2/standwallsit.json", dataReady);
 }
 
 async function keyPressed() {
@@ -23,7 +23,7 @@ function dataReady() {
   console.log(PWClassifier.data);
   PWClassifier.normalizeData();
   const trainingOptions = {
-    epochs: 150,
+    epochs: 300,
     batchSize: 20,
   };
   PWClassifier.train(trainingOptions, doneTraining);

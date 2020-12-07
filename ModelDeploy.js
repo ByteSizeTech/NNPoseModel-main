@@ -50,9 +50,9 @@ function setup() {
   brain = ml5.neuralNetwork(options);
   // PUSHUP MODEL
   const modelInfo = {
-    model: "squatModel-final/model.json",
-    metadata: "squatModel-final/model_meta.json",
-    weights: "squatModel-final/model.weights.bin",
+    model: "wallsit/model.json",
+    metadata: "wallsit/model_meta.json",
+    weights: "wallsit/model.weights.bin",
   };
   // const modelInfo = {
   //   model: "squatModel/model.json",
