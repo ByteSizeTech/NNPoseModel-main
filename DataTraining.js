@@ -4,6 +4,7 @@ function setup() {
   //SQUATS
   let options = {
     inputs: 34,
+    //CHANGE THE OUTPUT ACCORDINGLY
     outputs: 2,
     task: "classification",
     activationHidden: "relu",
@@ -37,7 +38,7 @@ function setup() {
   // };
 
   PWClassifier = ml5.neuralNetwork(options);
-  PWClassifier.loadData("Dataset/json2/sq104.json", dataReady);
+  PWClassifier.loadData("Dataset/json2/standwallsit.json", dataReady);
 }
 
 async function keyPressed() {
@@ -57,8 +58,8 @@ function dataReady() {
   // };
   //SQUAT
   const trainingOptions = {
-    epochs: 200,
-    batchSize: 16,
+    epochs: 300,
+    batchSize: 20,
   };
 
   //PUSHUP
