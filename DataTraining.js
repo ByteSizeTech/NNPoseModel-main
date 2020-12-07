@@ -5,7 +5,7 @@ function setup() {
   let options = {
     inputs: 34,
     //CHANGE THE OUTPUT ACCORDINGLY
-    outputs: 2,
+    outputs: 3,
     task: "classification",
     activationHidden: "relu",
     activationOutput: "sigmoid",
@@ -38,7 +38,7 @@ function setup() {
   // };
 
   PWClassifier = ml5.neuralNetwork(options);
-  PWClassifier.loadData("Dataset/json2/standwallsit100.json", dataReady);
+  PWClassifier.loadData("Dataset/JSON/pws-final.json", dataReady);
 }
 
 async function keyPressed() {
@@ -58,8 +58,8 @@ function dataReady() {
   // };
   //SQUAT
   const trainingOptions = {
-    epochs: 300,
-    batchSize: 20,
+    epochs: 250,
+    // batchSize: 20,
   };
 
   //PUSHUP
