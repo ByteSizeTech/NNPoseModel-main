@@ -38,7 +38,7 @@ function setup() {
   // };
 
   PWClassifier = ml5.neuralNetwork(options);
-  PWClassifier.loadData("Dataset/json2/standwallsit.json", dataReady);
+  PWClassifier.loadData("Dataset/json2/standwallsit100.json", dataReady);
 }
 
 async function keyPressed() {
